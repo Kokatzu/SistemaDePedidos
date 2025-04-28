@@ -1,5 +1,6 @@
 package Entities;
 
+import Entities.Enums.StatusOrder;
 import Utils.FormatUtils;
 
 import java.time.LocalDateTime;
@@ -15,11 +16,13 @@ public class ClientOrder {
     private LocalDateTime timeOfOrder;
     private Client client;
     private int id;
+    private StatusOrder statusOrder;
 
-    public ClientOrder(Client client, int id) {
+    public ClientOrder(Client client, int id, StatusOrder statusOrder) {
         this.timeOfOrder = LocalDateTime.now();
         this.client = client;
         this.id = id;
+        this.statusOrder = statusOrder;
     }
 
     public void addProduct(Product product){
@@ -43,6 +46,7 @@ public class ClientOrder {
         sb.append("----------------------------------------------------------------------------------------" + "\n");
         sb.append("Id do pedido: " + id + "  |  ");
         sb.append("Feito em: " + timeOfOrder.format(formatter) + "\n");
+        sb.append("Status: " + statusOrder + "\n");
         sb.append("----------------------------------------------------------------------------------------" + "\n");
         sb.append(client + "\n");
         sb.append("----------------------------------------------------------------------------------------" + "\n");

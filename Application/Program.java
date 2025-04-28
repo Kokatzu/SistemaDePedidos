@@ -1,6 +1,7 @@
 package Application;
 
 import Entities.*;
+import Entities.Enums.StatusOrder;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -21,10 +22,10 @@ public class Program {
         clientList.addClient(ana);
         clientList.addClient(eduardo);
 
-        ClientOrder clientOrder1 = new ClientOrder(joao, 1);
-        ClientOrder clientOrder2 = new ClientOrder(valeria, 2);
-        ClientOrder clientOrder3 = new ClientOrder(ana, 3);
-        ClientOrder clientOrder4 = new ClientOrder(eduardo, 4);
+        ClientOrder clientOrder1 = new ClientOrder(joao, 1, StatusOrder.PROCESSING);
+        ClientOrder clientOrder2 = new ClientOrder(valeria, 2, StatusOrder.PAYMENTCONFIRMED);
+        ClientOrder clientOrder3 = new ClientOrder(ana, 3, StatusOrder.SHIPPED);
+        ClientOrder clientOrder4 = new ClientOrder(eduardo, 4, StatusOrder.PROCESSING);
 
         Product p1 = new Product("Betoneira Menegotti", 21999.99, 3);
         Product p2 = new Product("Honda Civic 2025", 219950.99, 1);

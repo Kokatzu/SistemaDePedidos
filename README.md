@@ -1,48 +1,51 @@
-📦 Projeto de Gerenciamento de Pedidos (Baseado em Java)
+# Sistema de Pedidos
 
-Este projeto é um sistema simples para gerenciamento de pedidos de clientes, desenvolvido em **Java**.  
-Ele permite:
-- Cadastro de clientes.
-- Criação de pedidos.
-- Adição de produtos aos pedidos.
-- Visualização de informações resumidas.
+Projeto de gerenciamento de pedidos desenvolvido em Java.
 
----
-📁 Estrutura do Projeto
+## 🎯 Sobre o projeto
 
-- **src/**: Contém todo o código-fonte da aplicação.
-  - **Entities/**: Classes principais (`Client`, `Product`, `ClientOrder`).
-  - **Program.java**: Ponto de entrada principal do sistema.
+Este projeto foi desenvolvido como uma **base de testes e aprendizado** em Java, com foco em:
 
----
-## 🚀 Tecnologias Utilizadas
+- Aplicação prática de conceitos de Programação Orientada a Objetos (POO)
+- Organização de código em pacotes (separação por responsabilidade)
+- Uso de `Enum` para controle de estados de objetos
+- Implementação de utilitários (`Utils`) para formatação de dados
+- Desenvolvimento de práticas de boas estruturas de saída (visualização de dados em terminal)
 
-- Java 17+
-- IntelliJ IDEA (como IDE principal)
+A ideia principal é criar um **sistema de pedidos** simples e funcional, que sirva como **laboratório** para:
 
----
-🎯 Objetivos do Projeto
+- Experimentar boas práticas de código
+- Aprimorar a clareza e a apresentação de informações
+- Evoluir gradualmente para versões mais robustas (com Banco de Dados, Interfaces Gráficas, etc.)
 
-- Praticar conceitos de:
-  - Programação orientada a objetos (POO).
-  - Manipulação de listas.
-  - Boas práticas de estruturação de código.
-- Servir como base para testes de novas implementações futuras.
-
----
-📜 Status
-
-> 🚧 Projeto em desenvolvimento — novas funcionalidades estão sendo testadas!
+Este projeto está em constante evolução conforme novos aprendizados são incorporados.
 
 ---
 
-## 🤝 Contribuição
+## 📋 Funcionalidades
 
-Este projeto é pessoal, mas toda sugestão é bem-vinda!
+- Cadastro de clientes
+- Cadastro de produtos
+- Criação de pedidos
+- Associação de clientes e produtos aos pedidos
+- Visualização de pedidos em formato estruturado
+- Formatação de valores em Real Brasileiro (R$ XX.XXX,XX)
+- Formatação de datas (dd/MM/yyyy às HH:mm)
+- Enumerações para status de pedidos:
+  - Processando
+  - Pagamento Confirmado
+  - Enviado
+  - Cancelado
 
----
- 🧠 Observações
+## 🛠 Tecnologias e recursos usados
 
-- Este repositório contém apenas o diretório src/, focando no essencial para o funcionamento do sistema.
-- Backup de código feito para estudo e evolução.
-
+- Java (JDK 17 ou superior)
+- Programação orientada a objetos (POO)
+- Uso de `StringBuilder` para construção otimizada de strings
+- Enums para controle de estado
+- Utilitários (`FormatUtils`) para:
+  - Formatar preços
+  - Formatar datas
+- Organização de pacotes:
+  - `Entities` (entidades do sistema)
+  - `Utils` (funções auxiliares de formatação)

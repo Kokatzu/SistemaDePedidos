@@ -23,13 +23,9 @@ public class Product {
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        sb.append("Produto: " + name + "\n");
-        sb.append("Quantidade: " + quantity + "\n");
-        if(quantity > 1){
-            sb.append("Total: " + FormatUtils.priceFormat(totalProducts()) + "\n");
-        } else {
-            sb.append("Total: " + FormatUtils.priceFormat(price) + "\n");
-        }
+        sb.append("Produto: " + name + "  |  ");
+        sb.append("QTD: " + quantity + "  |  ");
+        sb.append("Preço: " + price + "\n");
         return sb.toString();
     }
 }

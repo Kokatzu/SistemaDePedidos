@@ -2,13 +2,13 @@ package Entities;
 
 import Utils.FormatUtils;
 
-import Utils.FormatUtils;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ClientOrder {
+    StringBuilder sb = new StringBuilder();
     List<Product> productList = new ArrayList<>();
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 
@@ -34,23 +34,26 @@ public class ClientOrder {
         return total;
     }
 
+    public int clientOrderId(){
+        return id;
+    }
+
     @Override
     public String toString(){
-        StringBuilder sb = new StringBuilder();
-        sb.append("----------------------------------------------------" + "\n");
-        sb.append("Id do pedido: " + id + "\n");
-        sb.append("Pedido feito em: " + timeOfOrder.format(formatter) + "\n");
-        sb.append("----------------------------------------------------" + "\n");
-        sb.append("Cliente: " + client + "\n");
-        sb.append("----------------------------------------------------" + "\n");
+        sb.append("----------------------------------------------------------------------------------------" + "\n");
+        sb.append("Id do pedido: " + id + "  |  ");
+        sb.append("Feito em: " + timeOfOrder.format(formatter) + "\n");
+        sb.append("----------------------------------------------------------------------------------------" + "\n");
+        sb.append(client + "\n");
+        sb.append("----------------------------------------------------------------------------------------" + "\n");
         sb.append("Produtos no carrinho" + "\n");
-        sb.append("----------------------------------------------------" + "\n");
+        sb.append("----------------------------------------------------------------------------------------" + "\n");
         for (Product p : productList){
             sb.append(p + "\n");
         }
-        sb.append("----------------------------------------------------" + "\n");
+        sb.append("----------------------------------------------------------------------------------------" + "\n");
         sb.append("Total do pedido: " + FormatUtils.priceFormat(totalInProducts()) + "\n");
-        sb.append("----------------------------------------------------" + "\n");
+        sb.append("----------------------------------------------------------------------------------------" + "\n");
         return sb.toString();
     }
 }

@@ -21,16 +21,6 @@ Ele permite:
 - IntelliJ IDEA (como IDE principal)
 
 ---
- 🛠 Como Rodar o Projeto
-
-1. Clone o repositório:
-  
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   
-2. Abra o projeto no IntelliJ IDEA.
-3. Execute o arquivo `Program.java`.
-
----
 🎯 Objetivos do Projeto
 
 - Praticar conceitos de:

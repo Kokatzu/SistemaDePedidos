@@ -25,7 +25,7 @@ public class Program {
         ClientOrder clientOrder1 = new ClientOrder(joao, 1, StatusOrder.PROCESSING);
         ClientOrder clientOrder2 = new ClientOrder(valeria, 2, StatusOrder.PAYMENTCONFIRMED);
         ClientOrder clientOrder3 = new ClientOrder(ana, 3, StatusOrder.SHIPPED);
-        ClientOrder clientOrder4 = new ClientOrder(eduardo, 4, StatusOrder.PROCESSING);
+        ClientOrder clientOrder4 = new ClientOrder(eduardo, 4, StatusOrder.CANCELED);
 
         Product p1 = new Product("Betoneira Menegotti", 21999.99, 3);
         Product p2 = new Product("Honda Civic 2025", 219950.99, 1);

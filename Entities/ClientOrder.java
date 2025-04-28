@@ -4,14 +4,12 @@ import Entities.Enums.StatusOrder;
 import Utils.FormatUtils;
 
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ClientOrder {
     StringBuilder sb = new StringBuilder();
     List<Product> productList = new ArrayList<>();
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 
     private LocalDateTime timeOfOrder;
     private Client client;
@@ -45,8 +43,8 @@ public class ClientOrder {
     public String toString(){
         sb.append("----------------------------------------------------------------------------------------" + "\n");
         sb.append("Id do pedido: " + id + "  |  ");
-        sb.append("Feito em: " + timeOfOrder.format(formatter) + "\n");
-        sb.append("Status: " + statusOrder + "\n");
+        sb.append("Feito em: " + FormatUtils.dateTimeFormat(timeOfOrder) + "\n");
+        sb.append("Status: " + statusOrder.showStatusOrder() + "\n");
         sb.append("----------------------------------------------------------------------------------------" + "\n");
         sb.append(client + "\n");
         sb.append("----------------------------------------------------------------------------------------" + "\n");
